@@ -1,5 +1,7 @@
 import * as core from "express-serve-static-core";
-import { createTask, getTask, updateTask } from "../UseCases/task-controller";
+import { createTask } from "../useCases/createTask";
+import { updateTask } from "../useCases/updateTask";
+import { getTask } from "../useCases/getTask";
 
 export function routes(app: core.Express) {
     app.post("/task", createTask),
