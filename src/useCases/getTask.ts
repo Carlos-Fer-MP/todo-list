@@ -1,5 +1,5 @@
 import { Response } from "express";
-import { db_connection } from '../config/db/db_connection';
+const db_connection = require('../config/db/db_connection');
 
 export function getTask(res: Response) {
     new Promise((resolve, reject) => {
@@ -18,7 +18,7 @@ export function getTask(res: Response) {
                                 id: row.id,
                                 date: row.date.toISOString().replace(/T/, ' ').replace(/\..+/, '').substring(0, 10),
                                 description: row.description,
-                                isFinished: row.isFinished == 1 ? true : false
+                                isFinished: row.isFinished == true 
                             }
                         })
                     }

@@ -14,4 +14,4 @@ db_connection.connect(function(err){
     console.log('Connected succesfully!')
 })
 
-module.exports =  db_connection;
+module.exports.db_connection =  db_connection;

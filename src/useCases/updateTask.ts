@@ -1,5 +1,5 @@
 import { Response, Request } from "express";
-import {db_connection} from '../config/db/db_connection';
+const db_connection = require('../config/db/db_connection');
 
 export function updateTask(req: Request, res: Response) {
     new Promise((resolve, reject) => {
